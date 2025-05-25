@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name_of_shift",
+ "creation": "2024-09-03 12:14:21.603878",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "compnay",
+  "from_time",
+  "minutes",
+  "column_break_koft",
+  "shift",
+  "to_time",
+  "hours",
+  "name_of_shift"
+ ],
+ "fields": [
+  {
+   "fieldname": "compnay",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "name_of_shift",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name Of Shift",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "hours",
+   "fieldtype": "Float",
+   "label": "Hours"
+  },
+  {
+   "fieldname": "minutes",
+   "fieldtype": "Float",
+   "label": "Minutes"
+  },
+  {
+   "fieldname": "shift",
+   "fieldtype": "Select",
+   "label": "Shift",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20"
+  },
+  {
+   "fieldname": "column_break_koft",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_time",
+   "fieldtype": "Time",
+   "label": "From Time"
+  },
+  {
+   "fieldname": "to_time",
+   "fieldtype": "Time",
+   "label": "To Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-04 14:56:12.608401",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "MachineShop Shift",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

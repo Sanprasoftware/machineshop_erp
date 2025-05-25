@@ -1,0 +1,27 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2024-12-02 11:16:36.242891",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-12-25 12:06:37.698879",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machining Register Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Machining",
+ "report_name": "Machining Register Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}

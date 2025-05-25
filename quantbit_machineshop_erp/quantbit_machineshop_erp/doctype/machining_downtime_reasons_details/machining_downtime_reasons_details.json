@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-04 15:35:44.809539",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "downtime_reason",
+  "is_break_down_reason",
+  "column_break_elvi",
+  "machine",
+  "column_break_lltg",
+  "time",
+  "column_break_vcim"
+ ],
+ "fields": [
+  {
+   "fieldname": "downtime_reason",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Downtime Reason",
+   "options": "MachineShop Downtime Reason",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_elvi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "machine",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Machine",
+   "options": "MachineShop Machine",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "reason.is_break_down_reason",
+   "fieldname": "is_break_down_reason",
+   "fieldtype": "Check",
+   "label": "Is Break Down Reason"
+  },
+  {
+   "fieldname": "column_break_lltg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_vcim",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-07 11:33:32.312106",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machining Downtime Reasons Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

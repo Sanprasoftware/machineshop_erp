@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{company}-{machineshop_additional_cost_type}",
+ "creation": "2024-10-09 14:35:08.749474",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "is_enable",
+  "machining",
+  "downstream",
+  "other",
+  "column_break_zrld",
+  "machineshop_additional_cost_type",
+  "expense_head_account",
+  "section_break_kcnt",
+  "machineshop_additional_cost_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_enable",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Enable"
+  },
+  {
+   "default": "0",
+   "fieldname": "other",
+   "fieldtype": "Check",
+   "label": "Other"
+  },
+  {
+   "fieldname": "column_break_zrld",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "machineshop_additional_cost_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Foundry Additional Cost Type",
+   "options": "MachineShop Additional Cost Type",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "expense_head_account",
+   "fieldtype": "Link",
+   "label": "Expense Head Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_kcnt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "The cost will be calculated from \"From Date\"",
+   "fieldname": "machineshop_additional_cost_details",
+   "fieldtype": "Table",
+   "label": "Machining Additional Cost Details",
+   "options": "MachineShop Additional Cost Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "machining",
+   "fieldtype": "Check",
+   "label": "Machining"
+  },
+  {
+   "default": "0",
+   "fieldname": "downstream",
+   "fieldtype": "Check",
+   "label": "Downstream"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-10-10 10:31:14.094389",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "MachineShop Additional Cost",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

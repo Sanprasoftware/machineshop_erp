@@ -1,0 +1,288 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-09-04 09:51:35.201761",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_details_tab",
+  "plant",
+  "naming_series",
+  "column_break_oaox",
+  "company",
+  "is_enable",
+  "section_break_jvjbb",
+  "finished_item_code",
+  "finished_item_name",
+  "finished_item_group",
+  "column_break_rbhxe",
+  "boring_item_code",
+  "boring_item_name",
+  "boring_item_group",
+  "column_break_ytda4",
+  "finished_item_warehouse",
+  "target_warehouse",
+  "machining_tab",
+  "raw_item",
+  "column_break_mcsjh",
+  "raw_item_name",
+  "column_break_mulbi",
+  "raw_item_group",
+  "column_break_errz",
+  "required_qty",
+  "section_break_nryf1",
+  "operation",
+  "column_break_i9lwf",
+  "cycle_time",
+  "section_break_d32qo",
+  "machining_operation_plan",
+  "downstream_processes_tab",
+  "downstream_process_details",
+  "tooling_and_consumables_tab",
+  "tooling_and_consumables_section_section",
+  "machineshop_tooling_details",
+  "machineshop_consumable_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Item Details"
+  },
+  {
+   "fetch_from": "plant.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "MSP-",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "section_break_jvjbb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_rbhxe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ytda4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "boring_item_code",
+   "fieldtype": "Link",
+   "label": "Boring Item Code",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "boring_item_code.item_name",
+   "fieldname": "boring_item_name",
+   "fieldtype": "Data",
+   "label": "Boring Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Boring Item Target Warehouse",
+   "mandatory_depends_on": "eval:doc.boring_item_code",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "machining_tab",
+   "fieldtype": "Tab Break",
+   "label": "Machining"
+  },
+  {
+   "fetch_from": "item.raw_material",
+   "fieldname": "raw_item",
+   "fieldtype": "Link",
+   "label": "Raw Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mcsjh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "raw_item.item_name",
+   "fieldname": "raw_item_name",
+   "fieldtype": "Data",
+   "label": "Raw Item Name"
+  },
+  {
+   "fieldname": "column_break_mulbi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "required_qty",
+   "fieldtype": "Float",
+   "label": "Required Qty",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_break_nryf1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Operation",
+   "options": "MachineShop Operation"
+  },
+  {
+   "fieldname": "column_break_i9lwf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cycle_time",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Cycle Time(In min)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_break_d32qo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "machining_operation_plan",
+   "fieldtype": "Table",
+   "label": "Machining Operation Plan",
+   "options": "Machining Operation Plan"
+  },
+  {
+   "fieldname": "downstream_processes_tab",
+   "fieldtype": "Tab Break",
+   "label": "Downstream processes"
+  },
+  {
+   "fieldname": "downstream_process_details",
+   "fieldtype": "Table",
+   "label": "Downstream Process Details",
+   "options": "MachineShop Downstream Process Details"
+  },
+  {
+   "fieldname": "finished_item_code",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Finished Item Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "finished_item_code.item_name",
+   "fieldname": "finished_item_name",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "Finished Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "finished_item_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Finished Item Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_oaox",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_enable",
+   "fieldtype": "Check",
+   "label": "Is Enable"
+  },
+  {
+   "fetch_from": "finished_item_code.item_group",
+   "fieldname": "finished_item_group",
+   "fieldtype": "Data",
+   "label": "Finished Item Group"
+  },
+  {
+   "fetch_from": "boring_item_code.item_group",
+   "fieldname": "boring_item_group",
+   "fieldtype": "Data",
+   "label": "Boring Item Group"
+  },
+  {
+   "fetch_from": "raw_item.item_group",
+   "fieldname": "raw_item_group",
+   "fieldtype": "Data",
+   "label": "Raw Item Group"
+  },
+  {
+   "fieldname": "column_break_errz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plant",
+   "fieldtype": "Link",
+   "label": "Plant",
+   "options": "Plant"
+  },
+  {
+   "fieldname": "machineshop_tooling_details",
+   "fieldtype": "Table",
+   "label": "Tooling Section",
+   "options": "MachineShop Tooling Details"
+  },
+  {
+   "fieldname": "machineshop_consumable_details",
+   "fieldtype": "Table",
+   "label": "Consumable Section",
+   "options": "MachineShop Consumable Details"
+  },
+  {
+   "fieldname": "tooling_and_consumables_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tooling and Consumables"
+  },
+  {
+   "fieldname": "tooling_and_consumables_section_section",
+   "fieldtype": "Section Break",
+   "label": "Tooling and Consumables Section"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-27 11:44:09.939758",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "MachineShop Processflow",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "finished_item_code",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{machine_name}",
+ "creation": "2024-09-04 14:44:52.837388",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "machine_name",
+  "workstation",
+  "company",
+  "column_break_b6qly",
+  "machine_type",
+  "average_downtime"
+ ],
+ "fields": [
+  {
+   "fieldname": "machine_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Machine Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "workstation",
+   "fieldtype": "Link",
+   "label": "Default Workstation",
+   "options": "Workstation"
+  },
+  {
+   "fieldname": "column_break_b6qly",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "machine_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Machine Type",
+   "options": "MachineShop Machine Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "average_downtime",
+   "fieldtype": "Duration",
+   "label": "Average Downtime (minutes)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-01 12:42:03.629680",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "MachineShop Machine",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

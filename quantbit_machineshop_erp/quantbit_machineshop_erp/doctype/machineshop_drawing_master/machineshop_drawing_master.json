@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-12-30 13:45:46.405517",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_gpxw",
+  "company",
+  "column_break_as6b",
+  "date",
+  "column_break_doa5",
+  "default",
+  "section_break_cgkm",
+  "item_code",
+  "drawing_number",
+  "revision_no",
+  "column_break_jzt0",
+  "item_name",
+  "drawing_title"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_as6b",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_doa5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "default",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Default"
+  },
+  {
+   "fieldname": "section_break_cgkm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Item Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "drawing_number",
+   "fieldtype": "Data",
+   "label": "Drawing Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "revision_no",
+   "fieldtype": "Select",
+   "label": "Drawing Revision Number",
+   "options": "\nR1\nR2\nR3\nR4\nR5\nR6\nR7\nR8\nR9\nR10\nR11\nR12\nR13\nR14\nR15\nR16\nR17\nR18\nR19\nR20\nR21\nR22\nR23\nR24\nR25\nR26\nR27\nR28\nR29\nR30\nR31\nR32\nR33\nR34\nR35\nR36\nR37\nR38\nR39\nR40\nR41\nR42\nR43\nR44\nR45\nR46\nR47\nR48\nR49\nR50"
+  },
+  {
+   "fieldname": "column_break_jzt0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "drawing_title",
+   "fieldtype": "Data",
+   "label": "Drawing Title"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MDM-"
+  },
+  {
+   "fieldname": "column_break_gpxw",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-24 16:27:23.975539",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "MachineShop Drawing Master",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "drawing_number,default",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

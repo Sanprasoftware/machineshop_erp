@@ -1,0 +1,22 @@
+[
+ {
+  "apply_to_all_doctypes": 1,
+  "condition": null,
+  "dimension_name": "MachineShop Operation",
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Inventory Dimension",
+  "document_type": null,
+  "fetch_from_parent": "MachineShop Operation",
+  "istable": 0,
+  "mandatory_depends_on": null,
+  "modified": "2024-10-21 16:05:45.300661",
+  "name": "MachineShop Operation",
+  "reference_document": "MachineShop Operation",
+  "reqd": 0,
+  "source_fieldname": "machineshop_operation",
+  "target_fieldname": "machineshop_operation",
+  "type_of_transaction": "Both",
+  "validate_negative_stock": 0
+ }
+]

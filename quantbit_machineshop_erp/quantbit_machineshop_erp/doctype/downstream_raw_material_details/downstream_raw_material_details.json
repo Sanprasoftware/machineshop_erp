@@ -1,0 +1,227 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-14 16:49:37.177817",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "column_break_cpjz",
+  "finished_item_code",
+  "column_break_uteu",
+  "finished_item_name",
+  "column_break_lmvb",
+  "finished_item_group",
+  "section_break_utpo",
+  "column_break_sezv",
+  "raw_item_code",
+  "source_warehouse",
+  "column_break_lmwe",
+  "raw_item_name",
+  "available_stock",
+  "column_break_vvov",
+  "raw_item_group",
+  "required_quantity",
+  "column_break_joje",
+  "used_quantity",
+  "used_qty_serial_no",
+  "section_break_dpgr",
+  "column_break_mctc",
+  "uom",
+  "column_break_pywh",
+  "weight",
+  "column_break_ozud",
+  "total_weight",
+  "column_break_okyi",
+  "raw_material_qty",
+  "section_break_pgol",
+  "machining",
+  "column_break_eycy",
+  "machineshop_processflow"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_cpjz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_uteu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_utpo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_sezv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "raw_item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Raw Item Code",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_lmwe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "raw_item_code.item_name",
+   "fieldname": "raw_item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Raw Item Name"
+  },
+  {
+   "fieldname": "column_break_vvov",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "source_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Source Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_joje",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "available_stock",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Available Stock"
+  },
+  {
+   "columns": 1,
+   "fieldname": "required_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Required Quantity"
+  },
+  {
+   "columns": 1,
+   "fieldname": "used_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Used Quantity"
+  },
+  {
+   "fieldname": "section_break_dpgr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mctc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "Weight UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "column_break_pywh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight Per Unit"
+  },
+  {
+   "fieldname": "column_break_ozud",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "Total Weight"
+  },
+  {
+   "fieldname": "section_break_pgol",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_eycy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "machineshop_processflow",
+   "fieldtype": "Link",
+   "label": "MachineShop Processflow",
+   "options": "MachineShop Processflow",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "finished_item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Finished Item Code",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "casting_item_code.item_name",
+   "fieldname": "finished_item_name",
+   "fieldtype": "Data",
+   "label": "Finished Item Name"
+  },
+  {
+   "fieldname": "machining",
+   "fieldtype": "Link",
+   "label": "Machining",
+   "options": "Machining"
+  },
+  {
+   "fieldname": "column_break_okyi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "raw_material_qty",
+   "fieldtype": "Float",
+   "label": "Raw Material Qty"
+  },
+  {
+   "fieldname": "column_break_lmvb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "finished_item_code.item_group",
+   "fieldname": "finished_item_group",
+   "fieldtype": "Data",
+   "label": "Finished Item Group"
+  },
+  {
+   "fetch_from": "raw_item_code.item_group",
+   "fieldname": "raw_item_group",
+   "fieldtype": "Data",
+   "label": "Raw Item Group"
+  },
+  {
+   "fieldname": "used_qty_serial_no",
+   "fieldtype": "Small Text",
+   "label": "Used qty Serial No"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-12 17:17:21.773490",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Downstream Raw Material Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

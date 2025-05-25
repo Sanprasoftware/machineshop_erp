@@ -1,0 +1,431 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-09-03 12:22:16.406531",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_details_tab",
+  "naming_series",
+  "company",
+  "section_break_yjtf",
+  "downstream_date",
+  "downstream_time",
+  "time",
+  "column_break_qqdg",
+  "supervisor_id",
+  "operator_id",
+  "start_date_time",
+  "column_break_ayfl",
+  "supervisor_name",
+  "operator_name",
+  "end_date_time",
+  "column_break_wndy",
+  "downstream_process",
+  "foundry_shift",
+  "total_working_time",
+  "column_break_9iaq",
+  "contractor_id",
+  "contractor_name",
+  "msp_details_tab",
+  "with_machining",
+  "column_break_tvds",
+  "machining",
+  "section_break_cniq",
+  "downstream_casting_details",
+  "section_break_ggts",
+  "total_casting_quantity",
+  "column_break_rhif",
+  "total_casting_weight",
+  "section_break_qsvj",
+  "downstream_raw_material_details",
+  "quality_inspection_details_tab",
+  "downstream_quality_inspection_details_section",
+  "quality_inspection_details",
+  "section_break_bnei",
+  "total_cr_qty",
+  "total_cr_weight",
+  "column_break_ppns",
+  "total_ok_qty",
+  "total_ok_weight",
+  "column_break_bjvb",
+  "total_rw_qty",
+  "total_rw_weight",
+  "column_break_xzlg",
+  "total_fr_qty",
+  "total_fr_weight",
+  "column_break_gasv",
+  "total_rejection_qty",
+  "total_rejection_weight",
+  "section_break_xhmt",
+  "downstream_rejected_reasons_details",
+  "downstram_additional_cost_details_tab",
+  "downstream_additional_cost_details",
+  "amended_from",
+  "total_additional_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "general_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "General details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "DSP-"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_yjtf",
+   "fieldtype": "Section Break",
+   "label": "General details"
+  },
+  {
+   "default": "Today",
+   "fieldname": "downstream_date",
+   "fieldtype": "Date",
+   "label": "Downstream Date",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "foundry_shift",
+   "fieldtype": "Link",
+   "label": "MachineShop Shift",
+   "options": "MachineShop Shift"
+  },
+  {
+   "fieldname": "column_break_qqdg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "downstream_time",
+   "fieldtype": "Time",
+   "label": "Downstream Time",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "column_break_ayfl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supervisor_id",
+   "fieldtype": "Link",
+   "label": "Supervisor ID",
+   "options": "MachineShop Supervisor Master"
+  },
+  {
+   "fetch_from": "supervisor_id.supervisor_name",
+   "fieldname": "supervisor_name",
+   "fieldtype": "Data",
+   "label": "Supervisor Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wndy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "operator_id",
+   "fieldtype": "Link",
+   "label": "Operator ID",
+   "options": "MachineShop Operator Master"
+  },
+  {
+   "fetch_from": "operator_id.operator_name",
+   "fieldname": "operator_name",
+   "fieldtype": "Data",
+   "label": "Operator Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9iaq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contractor_id",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Casting Treatment Contractor ID",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "contractor_id.supplier_name",
+   "fieldname": "contractor_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Casting Treatment Contractor Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "downstream_process",
+   "fieldname": "msp_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "MachineShop Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "with_machining",
+   "fieldtype": "Check",
+   "label": "With Machining"
+  },
+  {
+   "fieldname": "column_break_tvds",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "with_machining",
+   "fieldname": "machining",
+   "fieldtype": "Table MultiSelect",
+   "label": "Machining",
+   "options": "Downstream Machining Details"
+  },
+  {
+   "fieldname": "section_break_cniq",
+   "fieldtype": "Section Break",
+   "label": "Downstream Casting Details"
+  },
+  {
+   "fieldname": "downstream_casting_details",
+   "fieldtype": "Table",
+   "label": "Downstream Casting Details",
+   "options": "Downstream Casting Details"
+  },
+  {
+   "fieldname": "section_break_ggts",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_casting_quantity",
+   "fieldtype": "Float",
+   "label": "Total Casting Quantity"
+  },
+  {
+   "fieldname": "column_break_rhif",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_casting_weight",
+   "fieldtype": "Float",
+   "label": "Total Casting Weight"
+  },
+  {
+   "fieldname": "section_break_qsvj",
+   "fieldtype": "Section Break",
+   "label": "Raw Material Details"
+  },
+  {
+   "fieldname": "downstream_raw_material_details",
+   "fieldtype": "Table",
+   "label": "Downstream Raw Material Details",
+   "options": "Downstream Raw Material Details"
+  },
+  {
+   "depends_on": "downstream_process",
+   "fieldname": "quality_inspection_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Quality Inspection Details"
+  },
+  {
+   "fieldname": "downstream_quality_inspection_details_section",
+   "fieldtype": "Section Break",
+   "label": "Downstream Quality Inspection Details"
+  },
+  {
+   "fieldname": "quality_inspection_details",
+   "fieldtype": "Table",
+   "label": "Downstream Quality Inspection Details",
+   "options": "Downstream Quality Inspection Details"
+  },
+  {
+   "fieldname": "section_break_xhmt",
+   "fieldtype": "Section Break",
+   "label": "Rejection Breakdown Details"
+  },
+  {
+   "fieldname": "downstream_rejected_reasons_details",
+   "fieldtype": "Table",
+   "label": "Downstream Rejected Reasons Details",
+   "options": "Downstream Rejected Reasons Details"
+  },
+  {
+   "depends_on": "downstream_process",
+   "fieldname": "downstram_additional_cost_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Downstream Additional Cost Details"
+  },
+  {
+   "fieldname": "downstream_additional_cost_details",
+   "fieldtype": "Table",
+   "label": "Downstream Additional Cost Details",
+   "options": "Downstream Additional Cost Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Downstream Process",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "downstream_process",
+   "fieldtype": "Link",
+   "label": "Downstream Process",
+   "options": "MachineShop Downstream Process Master",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "foundry_shift.minutes",
+   "fieldname": "time",
+   "fieldtype": "Data",
+   "label": "Time",
+   "options": "MachineShop Shift",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_bnei",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_cr_qty",
+   "fieldtype": "Float",
+   "label": "Total CR Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cr_weight",
+   "fieldtype": "Float",
+   "label": "Total CR Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ppns",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_ok_qty",
+   "fieldtype": "Float",
+   "label": "Total OK Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_ok_weight",
+   "fieldtype": "Float",
+   "label": "Total OK Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bjvb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_rw_qty",
+   "fieldtype": "Float",
+   "label": "Total RW Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_rw_weight",
+   "fieldtype": "Float",
+   "label": "Total RW Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xzlg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_fr_qty",
+   "fieldtype": "Float",
+   "label": "Total FR Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_fr_weight",
+   "fieldtype": "Float",
+   "label": "Total FR Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_gasv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_rejection_qty",
+   "fieldtype": "Float",
+   "label": "Total Rejection Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_rejection_weight",
+   "fieldtype": "Float",
+   "label": "Total Rejection Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_additional_cost",
+   "fieldtype": "Float",
+   "label": "Total Additional Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_date_time",
+   "fieldtype": "Datetime",
+   "label": "Start Date Time"
+  },
+  {
+   "fieldname": "end_date_time",
+   "fieldtype": "Datetime",
+   "label": "End Date Time"
+  },
+  {
+   "fieldname": "total_working_time",
+   "fieldtype": "Float",
+   "label": "Total Working Time(In Min)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "custom_downstream_ref"
+  }
+ ],
+ "modified": "2025-02-22 14:59:17.265562",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Downstream Process",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

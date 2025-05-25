@@ -1,0 +1,465 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-04 14:29:31.823271",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_details_section",
+  "operation",
+  "item",
+  "raw_item_code",
+  "raw_item_serial_no",
+  "column_break_pwab",
+  "operation_name",
+  "finished_item_name",
+  "raw_item_name",
+  "has_serial_no",
+  "column_break_rzif",
+  "operation_rate",
+  "finished_item_group",
+  "raw_item_group",
+  "column_break_pkst",
+  "machine",
+  "machine_type",
+  "machineshop_processflow",
+  "quantity_and_time_logs_section",
+  "cycle_time",
+  "actual_cycle_time_in_min",
+  "column_break_xkqp",
+  "available_quantity",
+  "operation_start_date_time",
+  "column_break_mtkn",
+  "boring",
+  "operation_end_date_time",
+  "column_break_jkwb",
+  "earning_min",
+  "operation_working_time",
+  "setup_time_in_min",
+  "quantity_section",
+  "ok_qty",
+  "ok_weight",
+  "ok_serial_no",
+  "or1_qty",
+  "column_break_broj",
+  "cr_qty",
+  "cr_weight",
+  "cr_serial_no",
+  "or2_qty",
+  "column_break_nkjf",
+  "rw_qty",
+  "rw_weight",
+  "mr_serial_no",
+  "total_quantity",
+  "column_break_evhm",
+  "mr_qty",
+  "mr_weight",
+  "rw_serial_no",
+  "total_weight",
+  "column_break_egar",
+  "in_process_qty",
+  "in_process_weight",
+  "in_process_serial_no",
+  "section_break_ahqo",
+  "source_warehouse",
+  "column_break_uqfu",
+  "target_warehouse",
+  "column_break_yixa",
+  "source_inventory_dimension",
+  "column_break_yewd",
+  "target_inventory_dimension",
+  "section_break_aeny",
+  "remark"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Finished Item Code",
+   "options": "Item",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "finished_item_name",
+   "fieldtype": "Data",
+   "label": "Finished Item Name",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "machine",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Machine Name",
+   "options": "MachineShop Machine",
+   "reqd": 1
+  },
+  {
+   "fieldname": "machine_type",
+   "fieldtype": "Link",
+   "label": "Machine type",
+   "options": "MachineShop Machine Type",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "cycle_time",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Planned Cycle Time",
+   "precision": "2",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Operation Code",
+   "options": "MachineShop Operation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "operation.operation",
+   "fieldname": "operation_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Operation Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "operation_rate",
+   "fieldtype": "Float",
+   "label": "Operation Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "boring",
+   "fieldtype": "Float",
+   "label": "boring",
+   "read_only": 1
+  },
+  {
+   "fieldname": "raw_item_code",
+   "fieldtype": "Link",
+   "label": "Raw Item Code",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "raw_item_code.item_name",
+   "fieldname": "raw_item_name",
+   "fieldtype": "Data",
+   "label": "Raw Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ok_qty",
+   "fieldtype": "Float",
+   "label": "OK QTY"
+  },
+  {
+   "fieldname": "cr_qty",
+   "fieldtype": "Float",
+   "label": "CR QTY"
+  },
+  {
+   "fieldname": "mr_qty",
+   "fieldtype": "Float",
+   "label": "MR QTY"
+  },
+  {
+   "fieldname": "rw_qty",
+   "fieldtype": "Float",
+   "label": "RW QTY"
+  },
+  {
+   "fieldname": "or1_qty",
+   "fieldtype": "Float",
+   "label": "OR1 QTY"
+  },
+  {
+   "fieldname": "or2_qty",
+   "fieldtype": "Float",
+   "label": "OR2 QTY"
+  },
+  {
+   "fieldname": "source_warehouse",
+   "fieldtype": "Link",
+   "label": "Source Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "available_quantity",
+   "fieldtype": "Float",
+   "label": "Available Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "earning_min",
+   "fieldtype": "Float",
+   "label": "Earning Min.",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_quantity",
+   "fieldtype": "Float",
+   "label": "Total Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_details_section",
+   "fieldtype": "Section Break",
+   "label": "Item Details"
+  },
+  {
+   "fieldname": "column_break_pwab",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rzif",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pkst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quantity_and_time_logs_section",
+   "fieldtype": "Section Break",
+   "label": "Time Logs"
+  },
+  {
+   "fieldname": "column_break_xkqp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mtkn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jkwb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mr_weight",
+   "fieldtype": "Float",
+   "label": "MR weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cr_weight",
+   "fieldtype": "Float",
+   "label": "CR Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ok_weight",
+   "fieldtype": "Float",
+   "label": "OK Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rw_weight",
+   "fieldtype": "Float",
+   "label": "RW Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "Total Weight",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_ahqo",
+   "fieldtype": "Section Break",
+   "label": "Warehouse Details"
+  },
+  {
+   "fieldname": "column_break_uqfu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "label": "Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_yixa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "source_inventory_dimension",
+   "fieldtype": "Link",
+   "label": "Source Inventory Dimension",
+   "options": "MachineShop Operation"
+  },
+  {
+   "fieldname": "column_break_yewd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_inventory_dimension",
+   "fieldtype": "Link",
+   "label": "Target Inventory Dimension",
+   "options": "MachineShop Operation"
+  },
+  {
+   "fieldname": "machineshop_processflow",
+   "fieldtype": "Link",
+   "label": "MachineShop Processflow",
+   "options": "MachineShop Processflow"
+  },
+  {
+   "fetch_from": "item.item_group",
+   "fieldname": "finished_item_group",
+   "fieldtype": "Data",
+   "label": "Finished Item Group"
+  },
+  {
+   "fetch_from": "raw_item_code.item_group",
+   "fieldname": "raw_item_group",
+   "fieldtype": "Data",
+   "label": "Raw Item Group"
+  },
+  {
+   "fieldname": "in_process_qty",
+   "fieldtype": "Float",
+   "label": "In Process QTY"
+  },
+  {
+   "fieldname": "in_process_weight",
+   "fieldtype": "Float",
+   "label": "In Process Weight",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.has_serial_no==1",
+   "fieldname": "raw_item_serial_no",
+   "fieldtype": "Small Text",
+   "label": "Raw Item Serial No",
+   "options": "Serial No"
+  },
+  {
+   "depends_on": "eval:doc.has_serial_no==1",
+   "fieldname": "cr_serial_no",
+   "fieldtype": "Small Text",
+   "label": "CR Serial No",
+   "options": "Serial No"
+  },
+  {
+   "depends_on": "eval:doc.has_serial_no==1",
+   "fieldname": "ok_serial_no",
+   "fieldtype": "Small Text",
+   "label": "OK Serial No",
+   "options": "Serial No"
+  },
+  {
+   "depends_on": "eval:doc.has_serial_no==1",
+   "fieldname": "rw_serial_no",
+   "fieldtype": "Small Text",
+   "label": "RW Serial No",
+   "options": "Serial No"
+  },
+  {
+   "depends_on": "eval:doc.has_serial_no==1",
+   "fieldname": "in_process_serial_no",
+   "fieldtype": "Small Text",
+   "label": "In Process Serial No",
+   "options": "Serial No"
+  },
+  {
+   "depends_on": "eval:doc.has_serial_no==1",
+   "fieldname": "mr_serial_no",
+   "fieldtype": "Small Text",
+   "label": "MR Serial No",
+   "options": "Serial No"
+  },
+  {
+   "fieldname": "actual_cycle_time_in_min",
+   "fieldtype": "Float",
+   "label": "Actual Cycle Time (In Min)"
+  },
+  {
+   "fieldname": "operation_start_date_time",
+   "fieldtype": "Datetime",
+   "label": "Operation Start Date Time"
+  },
+  {
+   "fieldname": "operation_end_date_time",
+   "fieldtype": "Datetime",
+   "label": "Operation End Date Time"
+  },
+  {
+   "fieldname": "operation_working_time",
+   "fieldtype": "Float",
+   "label": "Operation Working Time"
+  },
+  {
+   "fieldname": "setup_time_in_min",
+   "fieldtype": "Float",
+   "label": "Setup Time (In Min)"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_aeny",
+   "fieldtype": "Section Break",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "quantity_section",
+   "fieldtype": "Section Break",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "column_break_broj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_nkjf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_evhm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_egar",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_serial_no",
+   "fieldtype": "Check",
+   "label": "Has Serial No"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-07 12:53:54.837164",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machining Operation Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

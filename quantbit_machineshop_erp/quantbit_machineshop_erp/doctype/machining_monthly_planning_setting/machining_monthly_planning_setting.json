@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:company",
+ "creation": "2025-03-18 12:47:21.959553",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "section_break_yccz",
+  "casting_rejection_percentage",
+  "machining_monthly_planning_setting_warehouse_details",
+  "section_break_igza",
+  "estimeted_daily_downtime",
+  "estimeted_electricity_downtime",
+  "other_total_time",
+  "estimeted_maintenance_percentage",
+  "estimeted_absenteeism_percentage",
+  "column_break_qomr",
+  "enable_estimeted_daily_downtime",
+  "enable_estimeted_electricity_downtime",
+  "enable_other_total_time",
+  "enable_estimeted_maintenance_percentage",
+  "enable_estimeted_absenteeism_percentage"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "unique": 1
+  },
+  {
+   "fieldname": "section_break_yccz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "machining_monthly_planning_setting_warehouse_details",
+   "fieldtype": "Table",
+   "label": "Machining Monthly Planning Setting Warehouse Details",
+   "options": "Machining Monthly Planning Setting Warehouse Details"
+  },
+  {
+   "description": "This percentage consider as estimate rejections for all finished item",
+   "fieldname": "casting_rejection_percentage",
+   "fieldtype": "Percent",
+   "label": "Casting Rejection Percentage"
+  },
+  {
+   "fieldname": "section_break_igza",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Monthwise Figure",
+   "fieldname": "estimeted_maintenance_percentage",
+   "fieldtype": "Percent",
+   "label": "Estimeted Maintenance Percentage"
+  },
+  {
+   "description": "Monthwise Figure ( insert total minutes of spare time )",
+   "fieldname": "other_total_time",
+   "fieldtype": "Float",
+   "label": "Other Total Time (in min)"
+  },
+  {
+   "description": "Daily Figure (Ex. lunch time, break time) ",
+   "fieldname": "estimeted_daily_downtime",
+   "fieldtype": "Float",
+   "label": "Estimeted Daily Downtime (in min)"
+  },
+  {
+   "description": "Monthwise Figure",
+   "fieldname": "estimeted_absenteeism_percentage",
+   "fieldtype": "Percent",
+   "label": "Estimeted Absenteeism Percentage"
+  },
+  {
+   "description": "Monthwise Figure ( insert total minutes of electricity downtime in single month)",
+   "fieldname": "estimeted_electricity_downtime",
+   "fieldtype": "Float",
+   "label": "Estimeted Electricity Downtime (in min)"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_estimeted_daily_downtime",
+   "fieldtype": "Check",
+   "label": "Enable Estimeted Daily Downtime Machine Type Wise "
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_estimeted_electricity_downtime",
+   "fieldtype": "Check",
+   "label": "Enable Estimeted Electricity Downtime Machine Type Wise"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_other_total_time",
+   "fieldtype": "Check",
+   "label": "Enable Other Total Time Machine Type Wise"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_estimeted_maintenance_percentage",
+   "fieldtype": "Check",
+   "label": "Enable Estimeted Maintenance Percentage Machine Type Wise"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_estimeted_absenteeism_percentage",
+   "fieldtype": "Check",
+   "label": "Enable Estimeted Absenteeism Percentage Machine Type Wise"
+  },
+  {
+   "fieldname": "column_break_qomr",
+   "fieldtype": "Column Break",
+   "label": "If checked, Availability Reduction Based On Machine Type wise"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-21 13:32:58.059478",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machining Monthly Planning Setting",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

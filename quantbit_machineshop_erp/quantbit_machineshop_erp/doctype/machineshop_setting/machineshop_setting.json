@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:company",
+ "creation": "2024-10-25 11:29:00.605971",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "default_target_warehouse_section",
+  "mr_target_warehouse",
+  "column_break_pbjo",
+  "cr_target_warehouse",
+  "column_break_shkq",
+  "rw_target_warehouse",
+  "column_break_xtdq",
+  "fr_target_warehouse",
+  "machineshop_default_warehouse_section",
+  "source_warehouse",
+  "column_break_oico",
+  "target_warehouse",
+  "machineshop_tooling_and_consumption_warehouse_section",
+  "default_tooling_source_warehouse",
+  "column_break_rubp",
+  "default_consumables_source_warehouse"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "unique": 1
+  },
+  {
+   "fieldname": "default_target_warehouse_section",
+   "fieldtype": "Section Break",
+   "label": "Default Target Warehouse"
+  },
+  {
+   "fieldname": "mr_target_warehouse",
+   "fieldtype": "Link",
+   "label": "MR Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_pbjo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cr_target_warehouse",
+   "fieldtype": "Link",
+   "label": "CR Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_shkq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rw_target_warehouse",
+   "fieldtype": "Link",
+   "label": "RW Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "machineshop_default_warehouse_section",
+   "fieldtype": "Section Break",
+   "label": "MachineShop Default Warehouse"
+  },
+  {
+   "fieldname": "source_warehouse",
+   "fieldtype": "Link",
+   "label": "Source Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_oico",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "label": "Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_xtdq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fr_target_warehouse",
+   "fieldtype": "Link",
+   "label": "FR Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "machineshop_tooling_and_consumption_warehouse_section",
+   "fieldtype": "Section Break",
+   "label": "MachineShop Tooling and Consumption Warehouse"
+  },
+  {
+   "fieldname": "default_tooling_source_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Tooling Source Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "column_break_rubp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_consumables_source_warehouse",
+   "fieldtype": "Link",
+   "label": "Default Consumables Source Warehouse",
+   "options": "Warehouse"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-02-25 15:21:02.793141",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "MachineShop Setting",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,447 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:MAC-{#######}",
+ "creation": "2024-09-04 14:20:22.205439",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_details_tab",
+  "company",
+  "date",
+  "shift_start_date_time",
+  "column_break_2jl4x",
+  "supervisor",
+  "operator",
+  "shift_end_date_time",
+  "column_break_y1py8",
+  "supervisor_name",
+  "operator_name",
+  "total_working_hours",
+  "column_break_pgxlt",
+  "wages",
+  "shift_time",
+  "required_time",
+  "posting_time",
+  "ready_to_downstream",
+  "is_job_order_applicable",
+  "do_not_delete",
+  "operation_details_tab",
+  "section_break_tfgrr",
+  "machining_finished_item_details",
+  "column_break_em55u",
+  "machining_operation_details",
+  "section_break_tnkpx",
+  "total_mr_qty",
+  "total_mr_weight",
+  "total_rejection_qty",
+  "column_break_ia6pd",
+  "total_cr_qty",
+  "total_cr_weight",
+  "total_quantity",
+  "column_break_bkgdk",
+  "total_ok_qty",
+  "total_ok_weight",
+  "total_qty_weight",
+  "column_break_ynkh",
+  "total_rw_qty",
+  "total_rw_weight",
+  "total_rejection_weight",
+  "column_break_lqtv",
+  "total_in_process_qty",
+  "total_in_process_weight",
+  "section_break_tzizq",
+  "rejected_items_reasons",
+  "section_break_bnvja",
+  "remaining_reasonable_time",
+  "downtime_and_additional_details_tab",
+  "downtime_reason_details",
+  "total_downtime",
+  "production_additional_cost_details",
+  "amended_from",
+  "total_additional_cost",
+  "tooling_and_consumable_details_tab",
+  "tooling_and_consumable_section_section",
+  "machining_tooling_section",
+  "machining_consumable_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "label": "Posting Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2jl4x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supervisor ID",
+   "options": "MachineShop Supervisor Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "operator",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Operator ID",
+   "options": "MachineShop Operator Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_y1py8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "supervisor.supervisor_name",
+   "fieldname": "supervisor_name",
+   "fieldtype": "Data",
+   "label": "Supervisor Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "operator.operator_name",
+   "fieldname": "operator_name",
+   "fieldtype": "Data",
+   "label": "Operator Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shift_time",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shift Time",
+   "options": "MachineShop Shift",
+   "reqd": 1
+  },
+  {
+   "fieldname": "required_time",
+   "fieldtype": "Float",
+   "label": "Required Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_pgxlt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wages",
+   "fieldtype": "Currency",
+   "label": "Wages",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "ready_to_downstream",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Ready To Downstream",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_job_order_applicable",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Job Order Applicable"
+  },
+  {
+   "fieldname": "do_not_delete",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Do Not Delete",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_tfgrr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "machining_finished_item_details",
+   "fieldtype": "Table",
+   "in_standard_filter": 1,
+   "label": "Machining Finished Item Details",
+   "options": "Machining Finished Item Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_em55u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "item.raw_material",
+   "fieldname": "machining_operation_details",
+   "fieldtype": "Table",
+   "label": "Machining Operation Details",
+   "options": "Machining Operation Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_tnkpx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ia6pd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bkgdk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tzizq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rejected_items_reasons",
+   "fieldtype": "Table",
+   "ignore_user_permissions": 1,
+   "label": "Machining Rejection Reasons Details",
+   "options": "Machining Rejection Reasons Details"
+  },
+  {
+   "fieldname": "section_break_bnvja",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remaining_reasonable_time",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Remaining Reasonable Time"
+  },
+  {
+   "fieldname": "downtime_reason_details",
+   "fieldtype": "Table",
+   "label": "Machining Downtime Reasons Details",
+   "options": "Machining Downtime Reasons Details"
+  },
+  {
+   "fieldname": "production_additional_cost_details",
+   "fieldtype": "Table",
+   "label": "Machining Additional Cost Details",
+   "options": "Machining Additional Cost Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Machining",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "general_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "General Details"
+  },
+  {
+   "depends_on": "eval:doc.required_time",
+   "fieldname": "operation_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Operation Details"
+  },
+  {
+   "depends_on": "eval:doc.required_time",
+   "fieldname": "downtime_and_additional_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Downtime and Additional Details"
+  },
+  {
+   "fieldname": "total_mr_qty",
+   "fieldtype": "Float",
+   "label": "Total MR Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_mr_weight",
+   "fieldtype": "Float",
+   "label": "Total MR Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_quantity",
+   "fieldtype": "Float",
+   "label": "Total Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cr_qty",
+   "fieldtype": "Float",
+   "label": "Total CR Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cr_weight",
+   "fieldtype": "Float",
+   "label": "Total CR Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_qty_weight",
+   "fieldtype": "Float",
+   "label": "Total Qty Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_ok_qty",
+   "fieldtype": "Float",
+   "label": "Total OK Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_ok_weight",
+   "fieldtype": "Float",
+   "label": "Total OK Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_rejection_qty",
+   "fieldtype": "Float",
+   "label": "Total Rejection Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ynkh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_rw_qty",
+   "fieldtype": "Float",
+   "label": "Total RW Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_rw_weight",
+   "fieldtype": "Float",
+   "label": "Total RW Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_rejection_weight",
+   "fieldtype": "Float",
+   "label": "Total Rejection Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_additional_cost",
+   "fieldtype": "Float",
+   "label": "Total Additional Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_lqtv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_in_process_qty",
+   "fieldtype": "Float",
+   "label": "Total In Process Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_in_process_weight",
+   "fieldtype": "Float",
+   "label": "Total In Process Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shift_start_date_time",
+   "fieldtype": "Datetime",
+   "label": "Shift Start Date Time"
+  },
+  {
+   "fieldname": "shift_end_date_time",
+   "fieldtype": "Datetime",
+   "label": "Shift End Date Time"
+  },
+  {
+   "fieldname": "machining_tooling_section",
+   "fieldtype": "Table",
+   "label": "Tooling Details",
+   "options": "Machining Tooling Details"
+  },
+  {
+   "fieldname": "machining_consumable_details",
+   "fieldtype": "Table",
+   "label": "Consumable Section",
+   "options": "Machining Consumable Details"
+  },
+  {
+   "fieldname": "total_working_hours",
+   "fieldtype": "Float",
+   "label": "Total Working Hours"
+  },
+  {
+   "depends_on": "eval:doc.required_time",
+   "fieldname": "tooling_and_consumable_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tooling and Consumable Details"
+  },
+  {
+   "fieldname": "tooling_and_consumable_section_section",
+   "fieldtype": "Section Break",
+   "label": "Tooling And consumable Section"
+  },
+  {
+   "fieldname": "total_downtime",
+   "fieldtype": "Float",
+   "label": "Total Downtime",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "custom_machining_ref"
+  }
+ ],
+ "modified": "2025-02-25 12:20:14.420352",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machining",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

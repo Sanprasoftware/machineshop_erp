@@ -1,0 +1,162 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2025-02-25 13:04:13.846301",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+     "sales_order",
+     "delivery_date",
+     "drg_no",
+     "machineshop_processflow",
+     "column_break_uyhl",
+     "item_code",
+     "scheduled_quantity",
+     "inspection_agency",
+     "column_break_r6ls",
+     "item_name",
+     "planned_quantity",
+     "job_no",
+     "column_break_bgk5",
+     "uom",
+     "available_quantity",
+     "railway",
+     "consignee_name",
+     "section_break_lvqf",
+     "ordered_quantity",
+     "column_break_sloa",
+     "estimated_rejection_quantity"
+    ],
+    "fields": [
+     {
+      "fieldname": "sales_order",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Sales Order",
+      "options": "Sales Order"
+     },
+     {
+      "fieldname": "scheduled_quantity",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Scheduled Quantity"
+     },
+     {
+      "fieldname": "column_break_uyhl",
+      "fieldtype": "Column Break"
+     },
+     {
+      "fieldname": "item_code",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Item Code",
+      "options": "Item"
+     },
+     {
+      "fieldname": "column_break_r6ls",
+      "fieldtype": "Column Break"
+     },
+     {
+      "fetch_from": "item_code.item_name",
+      "fieldname": "item_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Item Name"
+     },
+     {
+      "fieldname": "planned_quantity",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Planned Quantity"
+     },
+     {
+      "fieldname": "column_break_bgk5",
+      "fieldtype": "Column Break"
+     },
+     {
+      "fetch_from": "item_code.stock_uom",
+      "fieldname": "uom",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "UOM"
+     },
+     {
+      "fieldname": "delivery_date",
+      "fieldtype": "Date",
+      "in_list_view": 1,
+      "label": "Delivery Date"
+     },
+     {
+      "fieldname": "inspection_agency",
+      "fieldtype": "Data",
+      "label": "Inspection Agency"
+     },
+     {
+      "fieldname": "job_no",
+      "fieldtype": "Data",
+      "label": "Job No"
+     },
+     {
+      "fieldname": "railway",
+      "fieldtype": "Data",
+      "label": "Railway"
+     },
+     {
+      "fieldname": "consignee_name",
+      "fieldtype": "Data",
+      "label": "Consignee Name"
+     },
+     {
+      "fetch_from": "item_code.custom_machine_drawing_no",
+      "fieldname": "drg_no",
+      "fieldtype": "Data",
+      "label": "Drg No"
+     },
+     {
+      "fieldname": "available_quantity",
+      "fieldtype": "Float",
+      "in_list_view": 1,
+      "label": "Available Quantity"
+     },
+     {
+      "collapsible": 1,
+      "fieldname": "section_break_lvqf",
+      "fieldtype": "Section Break",
+      "label": "Quantity Details"
+     },
+     {
+      "fieldname": "ordered_quantity",
+      "fieldtype": "Float",
+      "label": "Ordered Quantity"
+     },
+     {
+      "fieldname": "column_break_sloa",
+      "fieldtype": "Column Break"
+     },
+     {
+      "fieldname": "estimated_rejection_quantity",
+      "fieldtype": "Float",
+      "label": "Estimated Rejection Quantity",
+      "read_only": 1
+     },
+     {
+      "fieldname": "machineshop_processflow",
+      "fieldtype": "Link",
+      "label": "MachineShop Processflow",
+      "options": "MachineShop Processflow"
+     }
+    ],
+    "index_web_pages_for_search": 1,
+    "istable": 1,
+    "links": [],
+    "modified": "2025-03-25 12:23:04.519016",
+    "modified_by": "Administrator",
+    "module": "Quantbit MachineShop ERP",
+    "name": "Item Machining Schedule",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+   }

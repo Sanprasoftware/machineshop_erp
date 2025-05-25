@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-14 15:02:08.244200",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "expense_head_account",
+  "additional_cost_type",
+  "amount",
+  "column_break_zrtz",
+  "discription"
+ ],
+ "fields": [
+  {
+   "fieldname": "discription",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description",
+   "max_height": "550px"
+  },
+  {
+   "fieldname": "column_break_zrtz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expense_head_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Expense Head / Account ",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "additional_cost_type",
+   "fieldtype": "Data",
+   "label": "Additional Cost Type",
+   "options": "MachineShop Additional Cost Type"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-27 16:53:49.402038",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Downstream Additional Cost Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

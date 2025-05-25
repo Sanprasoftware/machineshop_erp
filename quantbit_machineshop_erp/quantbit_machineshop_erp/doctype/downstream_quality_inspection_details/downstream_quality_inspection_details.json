@@ -1,0 +1,275 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-10-14 16:40:43.740816",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_details_section",
+  "column_break_edxy",
+  "finished_item_code",
+  "uom",
+  "column_break_uteu",
+  "finished_item_name",
+  "weight",
+  "column_break_skjc",
+  "finished_item_group",
+  "machining_id",
+  "has_serial_no",
+  "column_break_pywh",
+  "machineshop_processflow",
+  "finished_item_sr_no",
+  "section_break_pgol",
+  "column_break_gxzs",
+  "cr_quantity",
+  "cr_weight",
+  "cr_serial_no",
+  "column_break_ctbz",
+  "rw_quantity",
+  "rw_weight",
+  "rw_serial_no",
+  "column_break_ivjq",
+  "fr_quantity",
+  "fr_weight",
+  "fr_serial_no",
+  "column_break_ljit",
+  "ok_quantity",
+  "ok_weight",
+  "ok_serial_no",
+  "column_break_qowm",
+  "in_process_quantity",
+  "in_process_weight",
+  "in_process_serial_no",
+  "column_break_fvqp",
+  "total_casting_quantity",
+  "total_casting_weight",
+  "all_goes_to"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_edxy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_uteu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_skjc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Weight UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "column_break_pywh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weight Per Unit"
+  },
+  {
+   "fieldname": "section_break_pgol",
+   "fieldtype": "Section Break",
+   "label": "Rejection Details"
+  },
+  {
+   "fieldname": "column_break_gxzs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_casting_quantity",
+   "fieldtype": "Float",
+   "label": "Total Casting Quantity"
+  },
+  {
+   "fieldname": "column_break_ctbz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_casting_weight",
+   "fieldtype": "Float",
+   "label": "Total Casting Weight"
+  },
+  {
+   "fieldname": "column_break_ivjq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "ok_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "OK Quantity"
+  },
+  {
+   "fieldname": "column_break_ljit",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ok_weight",
+   "fieldtype": "Float",
+   "label": "OK Weight"
+  },
+  {
+   "fieldname": "all_goes_to",
+   "fieldtype": "Link",
+   "label": "All Goes To",
+   "options": "MachineShop Rejection Type"
+  },
+  {
+   "fieldname": "cr_quantity",
+   "fieldtype": "Float",
+   "label": "CR Quantity"
+  },
+  {
+   "fieldname": "cr_weight",
+   "fieldtype": "Float",
+   "label": "CR Weight"
+  },
+  {
+   "fieldname": "rw_quantity",
+   "fieldtype": "Float",
+   "label": "RW Quantity"
+  },
+  {
+   "fieldname": "rw_weight",
+   "fieldtype": "Float",
+   "label": "RW Weight"
+  },
+  {
+   "fieldname": "fr_quantity",
+   "fieldtype": "Float",
+   "label": "FR Quantity"
+  },
+  {
+   "fieldname": "fr_weight",
+   "fieldtype": "Float",
+   "label": "FR Weight"
+  },
+  {
+   "columns": 1,
+   "fieldname": "finished_item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Finished Item Code",
+   "options": "Item"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "casting_item_code.item_name",
+   "fieldname": "finished_item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Finished Item Name"
+  },
+  {
+   "fieldname": "machineshop_processflow",
+   "fieldtype": "Data",
+   "label": "Machineshop Processflow",
+   "options": "Pattern Master",
+   "reqd": 1
+  },
+  {
+   "fieldname": "machining_id",
+   "fieldtype": "Data",
+   "label": "Machining ID",
+   "options": "Pouring"
+  },
+  {
+   "fieldname": "item_details_section",
+   "fieldtype": "Section Break",
+   "label": "Item Details"
+  },
+  {
+   "fieldname": "column_break_qowm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fvqp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "finished_item_code.item_group",
+   "fieldname": "finished_item_group",
+   "fieldtype": "Data",
+   "label": "Finished Item Group"
+  },
+  {
+   "fieldname": "in_process_weight",
+   "fieldtype": "Float",
+   "label": "In Process Weight"
+  },
+  {
+   "depends_on": "eval:doc.has_serial_no==1",
+   "fieldname": "cr_serial_no",
+   "fieldtype": "Small Text",
+   "label": "CR Serial No"
+  },
+  {
+   "depends_on": "eval:doc.has_serial_no==1",
+   "fieldname": "rw_serial_no",
+   "fieldtype": "Small Text",
+   "label": "RW Serial No"
+  },
+  {
+   "depends_on": "eval:doc.has_serial_no==1",
+   "fieldname": "fr_serial_no",
+   "fieldtype": "Small Text",
+   "label": "FR Serial No"
+  },
+  {
+   "depends_on": "eval:doc.has_serial_no==1",
+   "fieldname": "ok_serial_no",
+   "fieldtype": "Small Text",
+   "label": "OK serial No"
+  },
+  {
+   "depends_on": "eval:doc.has_serial_no==1",
+   "fieldname": "in_process_serial_no",
+   "fieldtype": "Small Text",
+   "label": "In Process Serial No"
+  },
+  {
+   "columns": 1,
+   "fieldname": "in_process_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "In Process Quantity"
+  },
+  {
+   "depends_on": "eval:doc.has_serial_no==1",
+   "fieldname": "finished_item_sr_no",
+   "fieldtype": "Small Text",
+   "label": "Finished Item Sr. No."
+  },
+  {
+   "default": "0",
+   "fieldname": "has_serial_no",
+   "fieldtype": "Check",
+   "label": "Has Serial No"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-07 13:08:06.396874",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Downstream Quality Inspection Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

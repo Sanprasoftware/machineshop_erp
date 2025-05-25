@@ -1,0 +1,75 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2024-10-26 10:38:15.192466",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "mandatory": 1,
+   "options": "Company",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "finished_item",
+   "fieldtype": "Link",
+   "label": "Finished Item",
+   "mandatory": 1,
+   "options": "Item",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "rejection_type",
+   "fieldtype": "Link",
+   "label": "Rejection Type",
+   "mandatory": 1,
+   "options": "MachineShop Rejection Type",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Link",
+   "label": "Rejection Reason",
+   "mandatory": 1,
+   "options": "MachineShop Rejection Reason",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2025-01-15 12:38:24.458888",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Itemwise Causewise Machining Rejection Register",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "Select mr.finished_item AS 'Finished Item Code',\nmr.finished_item_name AS 'Finished Item Name',\nmr.operation_code AS 'Operation Code',\nmr.operation_name AS 'Operation Name',\nmr.rejection_type AS 'Rejection Type',\nmr.rejection_reason AS 'Rejection Reason',\nmr.rejection_qty AS 'Rejection Quantity'\n\nFROM `tabMachining` m \nLEFT JOIN `tabMachining Rejection Reasons Details` mr ON m.name = mr.parent\nWhere mr.finished_item = %(finished_item)s AND mr.rejection_type = %(rejection_type)s AND mr.rejection_reason = %(rejection_reason)s \nAND m.company = %(company)s AND m.date BETWEEN %(from_date)s ANd %(to_date)s",
+ "ref_doctype": "Machining",
+ "report_name": "Itemwise Causewise Machining Rejection Register",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}

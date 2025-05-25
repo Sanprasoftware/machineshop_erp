@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-02-25 13:16:50.552362",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "column_break_b6ae",
+  "column_break_hixt",
+  "section_break_yzjc",
+  "company",
+  "column_break_jbnv",
+  "month",
+  "column_break_cvkh",
+  "year",
+  "section_break_rc0a",
+  "get_data",
+  "item_machining_schedule",
+  "section_break_hwvv",
+  "get_machine_data",
+  "machine_availability",
+  "section_break_r8pv",
+  "machine_availability_summary"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_b6ae",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "year",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Year",
+   "options": "2024\n2025\n2026\n2027\n2028\n2029\n2030",
+   "reqd": 1
+  },
+  {
+   "fieldname": "month",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Month",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_rc0a",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "item_machining_schedule",
+   "fieldtype": "Table",
+   "label": "Item Machining Schedule",
+   "options": "Item Machining Schedule"
+  },
+  {
+   "fieldname": "section_break_hwvv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "machine_availability",
+   "fieldtype": "Table",
+   "label": "Machine Availability",
+   "options": "Machine Availability"
+  },
+  {
+   "fieldname": "section_break_r8pv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "machine_availability_summary",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Machine Availability Summary",
+   "options": "Machine Availability Summary"
+  },
+  {
+   "fieldname": "get_machine_data",
+   "fieldtype": "Button",
+   "label": "Get Machine Data"
+  },
+  {
+   "fieldname": "get_data",
+   "fieldtype": "Button",
+   "label": "Get Data"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "MMP -"
+  },
+  {
+   "fieldname": "section_break_yzjc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_jbnv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cvkh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hixt",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-19 14:53:56.410666",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machining Monthly Planning",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-04 10:11:31.430193",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "operation",
+  "column_break_dz9fo",
+  "operation_name",
+  "section_break_dlul7",
+  "machine_type",
+  "column_break_ygizf",
+  "operation_rate",
+  "column_break_bymci",
+  "cycle_time",
+  "column_break_ghxfh",
+  "setup_time_in_min",
+  "column_break_rmgx",
+  "boring",
+  "section_break_9rql1",
+  "source_warehouse",
+  "source_inventory_dimension",
+  "column_break_kysn1",
+  "target_warehouse",
+  "target_inventory_dimension",
+  "column_break_wfvlz",
+  "raw_material"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Operation",
+   "options": "MachineShop Operation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dz9fo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "operation.operation",
+   "fieldname": "operation_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Operation Name"
+  },
+  {
+   "fieldname": "section_break_dlul7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "operation_rate",
+   "fieldtype": "Float",
+   "label": "Operation rate"
+  },
+  {
+   "fieldname": "column_break_ygizf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "machine_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Machine Type",
+   "options": "MachineShop Machine Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bymci",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "cycle_time",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Cycle Time(In min)",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ghxfh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "boring",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Boring"
+  },
+  {
+   "fieldname": "section_break_9rql1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "source_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Source Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kysn1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wfvlz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "raw_material",
+   "fieldtype": "Link",
+   "label": "Raw Material",
+   "options": "Item"
+  },
+  {
+   "fieldname": "source_inventory_dimension",
+   "fieldtype": "Link",
+   "label": "Source Inventory Dimension",
+   "options": "MachineShop Operation"
+  },
+  {
+   "fieldname": "target_inventory_dimension",
+   "fieldtype": "Link",
+   "label": "Target Inventory Dimension",
+   "options": "MachineShop Operation"
+  },
+  {
+   "columns": 1,
+   "fieldname": "setup_time_in_min",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Setup Time (In min)",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rmgx",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-22 12:40:29.221545",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machining Operation Plan",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

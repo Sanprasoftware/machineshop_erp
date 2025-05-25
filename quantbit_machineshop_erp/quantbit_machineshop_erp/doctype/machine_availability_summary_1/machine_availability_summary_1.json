@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-25 17:15:33.527536",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "machine_type",
+  "total_working_days",
+  "percentage",
+  "booked"
+ ],
+ "fields": [
+  {
+   "fieldname": "machine_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Machine Type",
+   "options": "Machine Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_working_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Working Days"
+  },
+  {
+   "fieldname": "percentage",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Percentage"
+  },
+  {
+   "fieldname": "booked",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Booked"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-25 17:15:33.527536",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machine Availability Summary 1",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

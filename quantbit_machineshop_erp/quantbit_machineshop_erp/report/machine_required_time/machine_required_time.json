@@ -1,0 +1,28 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2025-02-24 11:00:14.339654",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "JAYSHIL FOUNDRY PVT LTD",
+ "letterhead": null,
+ "modified": "2025-02-24 14:21:43.521435",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machine Required Time",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Machining",
+ "report_name": "Machine Required Time",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}

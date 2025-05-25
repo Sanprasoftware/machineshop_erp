@@ -1,0 +1,20 @@
+[project]
+name = "quantbit_machineshop_erp"
+authors = [
+    { name = "Quantbit Technlogies Pvt Ltd", email = "support@quantbit.io"}
+]
+description = "Our cutting-edge Quantbit_MachineShop_ERP is designed to revolutionize the way machine shops manage their operations. Tailored specifically for the unique needs of the machine shop industry, this comprehensive ERP solution integrates all aspects of machine shop management into a single, user-friendly platform."
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    # "frappe~=15.0.0" # Installed and managed by bench.
+]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+# These dependencies are only installed when developer mode is enabled
+[tool.bench.dev-dependencies]
+# package_name = "~=1.1.0"

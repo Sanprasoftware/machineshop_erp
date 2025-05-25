@@ -1,0 +1,67 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2024-11-23 12:59:49.463643",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "mandatory": 1,
+   "options": "Company",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "operator",
+   "fieldtype": "Link",
+   "label": "Operator",
+   "mandatory": 1,
+   "options": "MachineShop Operator Master",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "supervisor",
+   "fieldtype": "Link",
+   "label": "Supervisor",
+   "mandatory": 1,
+   "options": "MachineShop Supervisor Master",
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2025-01-15 12:20:48.112483",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machining Register",
+ "owner": "sneha.shah@erpdata.in",
+ "prepared_report": 0,
+ "query": "Select \nm.date AS 'Posting Date',\nm.name AS 'Machining ID',\nm.total_ok_qty AS 'Total Ok Quantity',\nm.total_cr_qty AS 'Total CR Quantity',\nm.total_mr_qty AS 'Total MR Quantity',\nm.total_rw_qty AS 'Total RW Quantity',\nm.total_ok_weight AS 'OK Weight',\nm.total_cr_weight AS 'CR Weight',\nm.total_mr_weight AS 'MR Weight',\nm.total_rw_weight AS 'RR Weight',\nm.total_additional_cost AS 'Additional Cost',\nm.shift_time AS 'Shift Time',\nm.company AS 'Company',\nm.operator AS 'Operator',\nm.operator_name AS 'Operator Name',\nm.supervisor AS 'Supervisor',\nm.supervisor_name AS 'Supervisor Name'\n\nFROM `tabMachining` m \n\n\nWhere m.date BETWEEN %(from_date)s AND %(to_date)s \nAND m.company = %(company)s AND m.docstatus = 1 AND m.operator = %(operator)s AND m.supervisor = %(supervisor)s",
+ "ref_doctype": "Machining",
+ "report_name": "Machining Register",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}

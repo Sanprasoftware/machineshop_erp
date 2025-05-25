@@ -1,0 +1,34 @@
+[
+ {
+  "add_to_transit": 0,
+  "docstatus": 0,
+  "doctype": "Stock Entry Type",
+  "modified": "2024-10-18 17:36:35.376670",
+  "name": "Downstream Material Transfer",
+  "purpose": "Material Transfer"
+ },
+ {
+  "add_to_transit": 0,
+  "docstatus": 0,
+  "doctype": "Stock Entry Type",
+  "modified": "2024-10-18 17:36:03.575275",
+  "name": "Downstream Manufacturing",
+  "purpose": "Manufacture"
+ },
+ {
+  "add_to_transit": 0,
+  "docstatus": 0,
+  "doctype": "Stock Entry Type",
+  "modified": "2024-10-10 15:05:55.961371",
+  "name": "Machining Rejection",
+  "purpose": "Material Transfer"
+ },
+ {
+  "add_to_transit": 0,
+  "docstatus": 0,
+  "doctype": "Stock Entry Type",
+  "modified": "2024-10-10 15:05:30.276666",
+  "name": "Machining Manufacturing",
+  "purpose": "Manufacture"
+ }
+]

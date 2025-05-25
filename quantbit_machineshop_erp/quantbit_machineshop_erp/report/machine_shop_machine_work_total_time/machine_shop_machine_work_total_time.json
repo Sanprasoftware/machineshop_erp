@@ -1,0 +1,47 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2025-02-21 16:15:03.353475",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Comany",
+   "mandatory": 0,
+   "options": "company",
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Data",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "JAYSHIL FOUNDRY PVT LTD",
+ "letterhead": null,
+ "modified": "2025-02-21 18:14:00.091483",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machine Shop Machine Work Total Time",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "MachineShop Processflow",
+ "report_name": "Machine Shop Machine Work Total Time",
+ "report_type": "Script Report",
+ "roles": [],
+ "timeout": 0
+}

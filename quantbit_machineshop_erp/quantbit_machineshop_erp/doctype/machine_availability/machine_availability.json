@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-25 13:49:44.338024",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "machine_type",
+  "total_working_days",
+  "column_break_ffdt",
+  "estimeted_working_hours",
+  "estimeted_working_minutes",
+  "column_break_kdwd",
+  "total_working_minutes",
+  "section_break_mbsv",
+  "total_booked_minutes",
+  "total_booked_hours",
+  "column_break_d0jj",
+  "total_booked_percentage",
+  "time_reduction_details_section",
+  "maintenance_reduction",
+  "absenteeism_reduction",
+  "column_break_furr",
+  "electricity_downtime",
+  "other_reduction"
+ ],
+ "fields": [
+  {
+   "fieldname": "machine_type",
+   "fieldtype": "Link",
+   "label": "Machine Type",
+   "options": "MachineShop Machine Type"
+  },
+  {
+   "fieldname": "total_working_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Working Days"
+  },
+  {
+   "fieldname": "section_break_mbsv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_d0jj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ffdt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_booked_minutes",
+   "fieldtype": "Float",
+   "label": "Total Booked Minutes"
+  },
+  {
+   "fieldname": "total_booked_hours",
+   "fieldtype": "Float",
+   "label": "Total Booked Hours"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "time_reduction_details_section",
+   "fieldtype": "Section Break",
+   "label": "Time Reduction Details"
+  },
+  {
+   "fieldname": "maintenance_reduction",
+   "fieldtype": "Float",
+   "label": "Maintenance Reduction (in min)"
+  },
+  {
+   "fieldname": "absenteeism_reduction",
+   "fieldtype": "Float",
+   "label": "Absenteeism Reduction (in days)"
+  },
+  {
+   "fieldname": "electricity_downtime",
+   "fieldtype": "Float",
+   "label": "Electricity Downtime (in min)"
+  },
+  {
+   "fieldname": "other_reduction",
+   "fieldtype": "Float",
+   "label": "Other Reduction (in min)"
+  },
+  {
+   "fieldname": "total_working_minutes",
+   "fieldtype": "Float",
+   "label": "Total Working Minutes"
+  },
+  {
+   "fieldname": "column_break_furr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_booked_percentage",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Booked Percentage"
+  },
+  {
+   "fieldname": "estimeted_working_hours",
+   "fieldtype": "Float",
+   "label": "Estimeted Working Hours"
+  },
+  {
+   "fieldname": "estimeted_working_minutes",
+   "fieldtype": "Float",
+   "label": "Estimeted Working Minutes"
+  },
+  {
+   "fieldname": "column_break_kdwd",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-19 14:53:21.247695",
+ "modified_by": "Administrator",
+ "module": "Quantbit MachineShop ERP",
+ "name": "Machine Availability",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
